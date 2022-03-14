@@ -25,6 +25,7 @@ class Topo extends React.Component {
         <Image source={logo} style={styles.imagem} />
         <Text style={styles.boasVindas}>{this.state.topo.boasVindas}</Text>
         <Text style={styles.legenda}>{this.state.topo.legenda}</Text>
+        <Text style={styles.legenda}>{this.state.topo.legenda}</Text>
       </View>
     );
   }
