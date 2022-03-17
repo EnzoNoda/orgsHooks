@@ -12,7 +12,10 @@ export default function Produtor({nome, imagem, distancia, estrelas}) {
     false,
   );
 
-  const distanciaTexto = distanciaEmMetros(distancia);
+  const distanciaTexto = useMemo(
+    () => distanciaEmMetros(distancia),
+    [distancia],
+  );
 
   return (
     <TouchableOpacity onPress={inverterSelecionado} style={styles.cartao}>
@@ -44,7 +47,7 @@ const styles = StyleSheet.create({
   imagem: {
     width: 48,
     height: 48,
-    borderRadius: 6,
+    borderRadius: 7,
     marginVertical: 16,
     marginLeft: 16,
   },
